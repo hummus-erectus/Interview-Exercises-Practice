@@ -56,4 +56,4 @@ console.log(toTitleCase("pumpkin pranced purposefully across the pond"));
 //Comments
 // The charAt() method and using the index to select a character in a string are functionally equivalent, but charAt() is a method provided by the String object, while using the index to select a character is a feature of JavaScript's string data type.
 
-//Using .map() for part 2 is more concise.
+//Using .map() for part 2 is more concise. The .map() method does not modify the original array, it only creates a new array with the transformed elements.
