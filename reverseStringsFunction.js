@@ -53,5 +53,24 @@ function reverseStringsInArray(arr){
     return arr;
 }
 
+// Suggested solution
+// reverse a string manually
+// function reverseString(str){
+//     // initialize a new empty string
+//     let reversedString = "";
+//     // loop through original string backwards, adding each character to the new string
+//     for(let i = str.length - 1; i >= 0; i--){
+//         reversedString += str[i];
+//     }
+//     return reversedString
+//  }
+
+//  function reverseStringsInArray(arr){
+//     return arr.map(item => reverseString(item));
+// }
+
 console.log(reverseString(title));
 console.log(reverseStringsInArray(messages));
+
+// Comments
+// I really need to remember map()!
