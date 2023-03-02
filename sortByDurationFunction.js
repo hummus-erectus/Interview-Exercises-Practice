@@ -1,18 +1,18 @@
 import podcasts from "./data.js";
 
-/* Welcome Aboard Scrimba Airlines 
+/* Welcome Aboard Scrimba Airlines
 
-Our Scrimba Airlines in-flight entertainment package 
+Our Scrimba Airlines in-flight entertainment package
 includes a variety of podcasts. We need to add a feature that suggests
 podcasts to our patrons based on whether a flight is short or long. 
 
 Your sort function should take two arguments: the podcast data and
 flight length. If the flight is 60 minutes or less, sort the podcast list 
 from shortest to longest. If it's anything else, sort from longest
-to shortest. 
+to shortest.
 
 Your function shouldn't return anything. Instead log a numbered list 
-of the title and duration of 
+of the title and duration of
 each podcast to the console, like this:
 
 1. Crime Fan, 150 minutes
@@ -24,11 +24,43 @@ each podcast to the console, like this:
 
 */
 
+//My solution
 function sortByDuration(data, flightLength){
-  // Check flightLength is 60
-  // If so sort data from shortest to longest duration
+  // Check flightLength is equal to or less than 60
+  if (flightLength <= 60){
+  // If so, sort data from shortest to longest duration
+      data.sort((a, b) => a.duration - b.duration)
+  } else {
   // if not, sort data from longest to shortest
-  // console log numbered list using forEach and string literal
+      data.sort((a, b) => b.duration - a.duration)
+  }
+  // console log numbered list using for loop and string literal
+  for (let i = 0; i<data.length; i++){
+      console.log(`${i+1}. ${data[i].title}, ${data[i].duration} minutes`)
+  }
+
 }
 
+// Suggested solution
+// function sortByDuration(data, flightLength){
+//     // Check if flight is greater than 60 minutes
+//     if(flightLength > 60){
+//         // if yes, sort decending order (longest to shortest)
+//         data.sort((a,b) => b.duration - a.duration);
+//     } else {
+//         data.sort((a,b) => a.duration - b.duration);
+//     }
+//    // loop through my sorted array
+//    data.forEach(({title, duration}, index) => {
+//        // construct a string using the title and duration props 
+//       // use the index to number the list
+//       // console.log each item
+//        console.log(`${index + 1}. ${title}, ${duration} minutes`);
+//    });
+// }
+
+
 sortByDuration(podcasts, 60);
+
+// Comments
+// Revise sort() with fn
