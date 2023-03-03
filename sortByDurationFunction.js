@@ -52,7 +52,7 @@ function sortByDuration(data, flightLength){
 //     }
 //    // loop through my sorted array
 //    data.forEach(({title, duration}, index) => {
-//        // construct a string using the title and duration props 
+//        // construct a string using the title and duration props
 //       // use the index to number the list
 //       // console.log each item
 //        console.log(`${index + 1}. ${title}, ${duration} minutes`);
@@ -64,3 +64,5 @@ sortByDuration(podcasts, 60);
 
 // Comments
 // Revise sort() with fn
+// If wanting to use forEach(), remember that the first argument is the element (which in this case is an object that gets deconstructed), the index of the element currently being processed in the array, and the array itself.
+
